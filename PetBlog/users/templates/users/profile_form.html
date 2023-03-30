@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block content%}
+
+<h1>Edit Account</h1>
+<a class="backButton" href="{% url 'account' %}"></a>
+<form method="POST" action="{% url 'edit-account' %}", enctype="multipart/form-data">
+    {% csrf_token %}
+<!--    {% for field in form %}-->
+<!--        <label for="formInput#text">{{field.label}}</label>-->
+<!--        {{ field }}-->
+<!--    {% endfor %}-->
+    {{form.as_p}}
+    <input type="submit" value="Submit"/>
+</form>
+
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends 'main.html' %}
+
+{% block content %}
+
+
+
+<img style='max-width:500px' src="{{ project.featured_image.url }}">
+
+<h1>{{ project.title }}</h1>
+<hr>
+
+{% for tag in project.tags.all %}
+    <span style="border: 1px grey">{{tag}}</span>
+{% endfor %}
+<hr>
+<br>
+<p>{{project.description}}</p>
+<p>{{project.owner.name}}</p>
+<p>{{project.vote_ratio}}% Positive Feedback.  {{project.vote_total}} Vote{{project.vote_total|pluralize:"s"}}</p>
+
+{% if request.user.profile.id in project.reviewers %}
+
+<!--<p> You have already submitted  your review for this project </p>-->
+
+    {% elif request.user.profile == project.owner %}
+    <p>You can not review your own work</p>
+
+    {% elif request.user.is_authenticated %}
+    <form class="form" action="{% url 'project' project.id %}" method="POST">
+        {% csrf_token %}
+        {% for field in form %}
+        <div class="form__field">
+            <label for="formInput#textarea">{{field.label}}</label>
+            {{field}}
+        </div>
+        {% endfor %}
+        <input class="btn btn--sub btn--lg" type="submit" value="Comments"/>
+    </form>
+    {% else %}
+        <a href="{% url 'login' %}?next={{request.path}}">Please login to leave a review</a>
+    {% endif %}
+{% for review in project.review_set.all %}
+{% if review.body %}
+<div>
+    <a href="{% url 'user-profile' review.owner.id %}">
+        <img style="width: 100px" class="avatar" src="{{review.owner.profile_image.url}}">
+    </a>
+
+    <div>
+        <a href="{% url 'user-profile' review.owner.id %}">{{review.owner.name}}</a>
+        <p>{{ review.body|linebreaksbr }}</p>
+    </div>
+</div>
+{% endif %}
+{% endfor %}
+
+
+{% endblock %}

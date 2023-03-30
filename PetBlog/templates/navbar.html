@@ -1,0 +1,43 @@
+{% load static %}
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PetGram</title>
+    <link rel="stylesheet" type="text/css"
+          media="screen" href='{% static "styles/navbar.css" %}'>
+</head>
+<body>
+<!-- Header Section -->
+<header class="header">
+    <div class="container container--narrow">
+        <div class="wandl">
+            <a href="{% url 'profiles' %}" class="header__logo">
+                <img id='logo' src = "{% static 'images/logo-transparent-svg.svg' %}" alt="logo">
+            </a>
+            <div id="weather">
+
+            </div>
+        </div>
+        <nav class="header__nav">
+            </label>
+            <ul class="header__menu">
+                <li class="header__menuItem"><a href="{% url 'profiles' %}">Users</a></li>
+                <li class="header__menuItem"><a href="{% url 'projects' %}">Posts</a></li>
+                {% if request.user.is_authenticated %}
+                <li class="header__menuItem"><a id="asb" href="{% url 'account' %}">Account</a></li>
+                <li class="header__menuItem"><a href="{% url 'logout'  %}">Logout</a></li>
+                {% else %}
+                <li class="header__menuItem"><a href="{% url 'login'  %}">Login/Sign Up</a></li>
+                {% endif %}
+            </ul>
+        </nav>
+    </div>
+</header>
+<!--<img src = "{% static 'images/logo-svg.svg' %}">-->
+<!--<a href="{%url 'create-project' %}">Add Project</a>-->
+<hr>
+<script src="{% static 'js/weather.js'%}"></script>
+</body>
