@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.auth {
+    text-align: center;
+}
+
+.card {
+    background-color: #f5f5f5;
+    margin-top: 150px;
+}
+
+input {
+    width: 200px;
+}
+
+.auth__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 10px;
+}
+
+.form__field input {
+    width: 180px;
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form__field label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+.form__field p {
+    color: #ff0000;
+    font-size: 0.9rem;
+    margin-top: 5px;
+}
+
+.btn--lg{
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn--lg:hover {
+    background-color: #3e8e41;
+}
+
+.auth-p {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.messages {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.messages li {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 3px;
+    font-size: 16px;
+}
+
+.messages li.success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.messages li.error {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+.messages li.warning {
+    color: #856404;
+    background-color: #fff3cd;
+    border-color: #ffeeba;
+}
+
+.messages li.info {
+    color: #0c5460;
+    background-color: #d1ecf1;
+    border-color: #bee5eb;
+}
+
+.a-sign-up {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; 
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 20px;
+}

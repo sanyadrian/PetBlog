@@ -1,0 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+.foot {
+    display: flex;
+    list-style: none;
+    justify-content: space-evenly;
+    margin-top: 200px;
+    font-family: "Montserrat", sans-serif;
+}
