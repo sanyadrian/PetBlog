@@ -4,9 +4,9 @@
     text-align: center;
 }
 
-.card {
+.card1{
     background-color: #f5f5f5;
-    margin-top: 150px;
+    margin-top: 200px;
 }
 
 input {
@@ -55,7 +55,7 @@ input {
 }
 
 .btn--lg:hover {
-    background-color: #3e8e41;
+    background-color: #225922;
 }
 
 .auth-p {
@@ -103,15 +103,31 @@ input {
     border-color: #bee5eb;
 }
 
+/*.a-sign-up {*/
+/*    background-color: #0a8f0a;*/
+/*    color: #fff;*/
+/*    border: none;*/
+/*    padding: 10px;*/
+/*    border-radius: 5px;*/
+/*    cursor: pointer;*/
+/*    transition: background-color 0.3s ease; */
+/*    text-decoration: none;*/
+/*    text-transform: uppercase;*/
+/*    margin-top: 20px;*/
+/*    transition: background-color 0.3s ease;*/
+/*}*/
+
 .a-sign-up {
-    background-color: #4CAF50;
+    background-color: #0a8f0a;
     color: #fff;
     border: none;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s ease; 
+    transition: background-color 0.3s ease;
     text-decoration: none;
-    text-transform: uppercase;
-    margin-top: 20px;
+}
+
+.a-sign-up:hover {
+    background-color: #225922;
 }

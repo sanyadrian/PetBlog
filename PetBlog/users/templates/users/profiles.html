@@ -1,18 +1,18 @@
 {% extends 'main.html' %}
 
 {% block content %}
-<main class="home">
-    <section class="hero-section text-center">
-        <div class="container container--narrow">
-            <div class="hero-section__box">
+<main class="home-1">
+    <section class="hero-section-hero text-center-text">
+        <div class="container container--narrow-prof">
+            <div class="hero1-section__box-1">
                 <h2>CONNECT WITH <span>PETLOVERS</span></h2>
                 <h2>FROM AROUND THE WORLD</h2>
             </div>
 
-            <div class="hero-section__search">
+            <div class="hero1-section__search-1">
                 <form id="searchFrom" class="form" action="{% url 'profiles' %}" method="get">
-                    <div class="form__field">
-                        <label for="formInput#search">Search Petlovers </label>
+                    <div class="form1__field">
+                        <label for="formInput#search"> Search Petlovers </label>
                         <input class="input input--text" id="formInput#search" type="text" name="search_query"
                                value="{{ search_query }}"placeholder="Search name" />
                     </div>
@@ -23,24 +23,28 @@
         </div>
     </section>
     <!-- Search Result: DevList -->
-    <section class="devlist">
-        <div class="container">
-            <div class="grid grid--three">
+    <section class="dev1list">
+        <div class="container1">
+            <div class="grid1 grid1--three">
                 {% for profile in profiles %}
-                <div class="column card">
-                    <div class="dev">
-                        <a href="{% url 'user-profile' profile.id %}"class="card__body">
-                            <div class="dev__profile">
-                                <img class="avatar avatar--md" src="{{ profile.profile_image.url }}" alt="image" />
-                                <div class="dev__meta">
-                                    <h3>{{ profile.name }}</h3>
-                                    <h5>{{ profile.short_intro|slice:"60" }}</h5>
+                <div class="column1 card">
+                    <div class="dev1">
+                        <div class="card1__body">
+                            <a href="{% url 'user-profile' profile.id %}" class="dev1__profile">
+                                    <img class="avatar1 avatar--md" src="{{ profile.profile_image.url }}" alt="image" />
+                                <div class="dev1__meta">
+                                    <h3 class="prof_name">{{ profile.name }}</h3>
+                                    <h5 class="prof_into">{{ profile.short_intro|slice:"60" }}</h5>
+
+                                    <p class="dev1__info">
+                                        {{ profile.bio|slice:"150"}}
+                                    </p>
                                 </div>
-                            </div>
-                            <p class="dev__info">
-                                {{ profile.bio|slice:"150"}}
-                            </p>
-                        </a>
+                            </a>
+<!--                            <p class="dev1__info">-->
+<!--                                {{ profile.bio|slice:"150"}}-->
+<!--                            </p>-->
+                        </div>
                     </div>
                 </div>
             </div>

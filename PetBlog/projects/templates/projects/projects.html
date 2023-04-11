@@ -3,65 +3,49 @@
 {% block content %}
 {{page}}
 
+<h1 class="projects1__title">Projects</h1>
 
-<h1>Projects</h1>
-
-<div class="hero-section__search">
-    <form id="searchForm" class="form" action="{% url 'projects' %}" method="get">
-        <div class="form__field">
-            <label for="formInput#search">Search By Projects </label>
-            <input class="input input--text" id="formInput#search" type="text" name="search_query"
+<div class="projects1__search">
+    <form id="searchForm" class="form1" action="{% url 'projects' %}" method="get">
+        <div class="form1__field">
+            <label for="formInput#search">Search By Projects</label>
+            <input class="input1 input--text" id="formInput#search" type="text" name="search_query"
                    placeholder="Search by Post Title" value="{{search_query}}"/>
         </div>
 
-        <input class="btn" type="submit" value="Search" />
+        <input class="btn1" type="submit" value="Search" />
     </form>
 </div>
 
-<!--<table>-->
-<!--    <tr>-->
-<!--        <th>Project</th>-->
-<!--        <th>Positive Votes</th>-->
-<!--        <th>Votes</th>-->
-<!--        <th>Author</th>-->
-<!--        <th>Tags</th>-->
-<!--        <th></th>-->
-<!--    </tr>-->
+{% for project in projects %}
 
-    {% for project in projects %}
-<!--        <tr>-->
-<!--            <td>{{project.title}}</td>-->
-<!--            <td>{{project.vote_ratio}}%</td>-->
-<!--            <td>{{project.vote_total}}</td>-->
-<!--            <td><a href="{% url 'user-profile' project.owner.id %}">{{project.owner.name}}</a></td>-->
-<!--            <td>{{project.created}}</td>-->
-<!--            <td>{{project.tags}}</td>-->
-<!--&lt;!&ndash;            <td><a href="{% url 'update-project' project.id %}">Edit</a></td>&ndash;&gt;-->
-<!--&lt;!&ndash;            <td><a href="{% url 'delete-project' project.id %}">Delete</a></td>&ndash;&gt;-->
-<!--&lt;!&ndash;            <td><a href="{% url 'project' project.id %}">View</a></td>&ndash;&gt;-->
-<!--        </tr>-->
-
-    <div style="max-width: 200px" class="posts">
-        <a href="{% url 'project' project.id %}" class="project">
-        <img style="width: 200px; margin-top: 20px" class="project_image" src="{{ project.featured_image.url }}" alt="project_image">
-        </a>
-        <h3> {{project.title}} </h3>
-        <span> {{project.vote_ratio}}%</span>
-        <span>{{project.vote_total}} Vote{{project.vote_total|pluralize:"s"}}</span>
-        <p>{{project.created}}</p>
-        <a href="{% url 'user-profile' project.owner.id %}"><p>{{project.owner.name}}</p></a>
-        <div style= "display: grid; grid-template-columns: repeat(4, auto); justify-content: center" class="project_tags">
+<div class="projects1__post">
+    <a href="{% url 'project' project.id %}" class="post1__link">
+        <img class="post1__image" src="{{ project.featured_image.url }}" alt="project_image">
+    </a>
+    <div class="post1__details">
+        <a href="{% url 'project' project.id %}" class="post1__title">{{project.title}}</a>
+        <div class="post1__meta">
+            <span class="post1__ratio">{{project.vote_ratio}}%</span>
+            <span class="post1__votes">{{project.vote_total}} Vote{{project.vote_total|pluralize:"s"}}</span>
+            <span class="post1__created">{{project.created}}</span>
+        </div>
+        <a href="{% url 'user-profile' project.owner.id %}" class="post1__owner">{{project.owner.name}}</a>
+        <div class="post1__tags">
             {% for tag in project.tags.all %}
-            <ul style="list-style: none;" class="tags">
-                <li>
-                    {{tag}}
-                </li>
-            </ul>
+            <span class="tag1">{{tag}}</span>
             {% endfor %}
         </div>
+        <div class="post1__description">
+            {{project.description}}
+        </div>
+        <button class="read-more-button">Read more</button>
     </div>
-    {% endfor%}
-<!--</table>-->
+</div>
+
+{% endfor %}
+
 {% include 'pagination.html' with queryset=projects custom_range=custom_range %}
 
 {% endblock %}
+

@@ -1,0 +1,81 @@
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    margin-top: 150px;
+    text-align: center;
+}
+
+.backButton {
+    background-color: #0a8f0a;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.backButton:hover {
+    background-color: #225922;
+}
+
+
+form {
+    margin: 0 auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    text-align: left;
+    font-weight: bold;
+}
+
+input[type="text"], input[type="email"], textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+input[type="submit"] {
+    background-color: #0a8f0a;;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/*input[type='profile_image'] {*/
+/*    display: none;*/
+/*}*/
+
+input[type="submit"]:hover {
+    background-color: #225922;
+}
+
+.errorlist {
+    color: red;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+
+.errorlist li {
+    margin-bottom: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}

@@ -1,0 +1,38 @@
+.delete_form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*margin: 50px;*/
+    margin-top: 200px;
+}
+
+p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+button,
+input[type="submit"] {
+    background-color: #0a8f0a;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover,
+input[type="submit"]:hover {
+    background-color: #225922;
+}
+
+
+#btn-goback a{
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,191 @@
+.settingsPage {
+    margin-top: 50px;
+}
+
+.card__body-dev {
+    position: relative;
+}
+
+.card__body {
+    margin-top: 100px;
+}
+
+.settingsPage{
+    text-align: center;
+}
+
+.dev__avatar {
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    margin-left: 30px;
+    margin-top: 20px;
+}
+
+.dev__name {
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.dev__title {
+    font-size: 18px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.dev__location {
+    font-size: 16px;
+    color: #777;
+    margin-bottom: 20px;
+}
+
+.dev__social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    margin-bottom: 20px;
+    padding: 0;
+
+}
+
+.dev__social li:not(:last-child) {
+    margin-right: 10px;
+}
+
+.dev__social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: #eee;
+    width: 40px;
+    height: 40px;
+}
+
+.dev__social i {
+    font-size: 15px;
+    color: #777;
+}
+
+.devInfo__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.devInfo__about {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 40px;
+}
+
+.settings__title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.settings__btn {
+    margin-bottom: 20px;
+}
+
+/*.settings__table {*/
+/*    border-collapse: collapse;*/
+/*    width: 500px;*/
+/*}*/
+
+/*.settings__table td {*/
+/*    padding: 20px;*/
+/*    border: 1px solid #ddd;*/
+/*}*/
+
+.settings__table {
+    margin: auto;
+    width: 100%;
+    max-width: 800px;
+    border-collapse: collapse;
+}
+
+.settings__table td,
+.settings__table th {
+    padding: 1rem;
+    border: 1px solid #ccc;
+    text-align: left;
+}
+
+.settings__table th {
+    background-color: #f1f1f1;
+    font-weight: bold;
+    text-align: center;
+}
+
+
+.settings__thumbnail img {
+    width: 100%;
+}
+
+.settings__tableInfo a {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    display: block;
+}
+
+.settings__tableInfo p {
+    font-size: 16px;
+    color: #777;
+    line-height: 1.5;
+    margin-bottom: 10px;
+}
+
+.settings__tableActions a:last-child {
+    margin-top: 200px;
+    margin-bottom: 200px;
+}
+
+.tag--lg {
+    background-color: #0a8f0a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.tag--lg:hover {
+    background-color: #225922;
+}
+
+.settings__btn {
+    background-color: #0a8f0a;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    margin-bottom: 50px;
+}
+
+.settings__btn:hover {
+    background-color: #225922;
+}
+
+.settings {
+    margin-bottom: 30px;
+}
+
+#edit-btn {
+    margin-bottom: 100px;
+}
+
+#delete-btn {
+    margin-top: 100px;
+}

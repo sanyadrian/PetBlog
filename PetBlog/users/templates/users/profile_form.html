@@ -2,16 +2,22 @@
 
 {% block content%}
 
+<div class="form-container">
 <h1>Edit Account</h1>
-<a class="backButton" href="{% url 'account' %}"></a>
-<form method="POST" action="{% url 'edit-account' %}", enctype="multipart/form-data">
+<a class="backButton" href="{% url 'account' %}">Back</a>
+<form id='profile_form' method="POST" action="{% url 'edit-account' %}", enctype="multipart/form-data">
     {% csrf_token %}
 <!--    {% for field in form %}-->
 <!--        <label for="formInput#text">{{field.label}}</label>-->
 <!--        {{ field }}-->
 <!--    {% endfor %}-->
+    <div class="form-field">
     {{form.as_p}}
+    </div>
     <input type="submit" value="Submit"/>
 </form>
+</div>
+
+
 
 {% endblock %}

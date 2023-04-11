@@ -3,11 +3,11 @@
 {% block content %}
 
 <main class="profile my-md">
-    <div class="container">
+    <div class="container-profile">
         <div class="layout">
             <div class="column column--1of3">
-                <div class="card text-center">
-                    <div class="card__body dev">
+                <div class="card-user text-center">
+                    <div class="card__body1_dev">
                         <img class="avatar avatar--xl" src="{{ profile.profile_image.url }}"/>
                         <h2 class="dev__name">{{ profile.name }}</h2>
                         <p class="dev__title">{{ profile.short_intro }}</p>
@@ -29,7 +29,6 @@
                             </li>
                             {% endif %}
                         </ul>
-                        <a href="#" class="btn btn--sub btn--lg">Send Message </a>
                     </div>
                 </div>
             </div>
