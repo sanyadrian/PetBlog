@@ -1,0 +1,62 @@
+.single-post img {
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    width: 300px;
+    margin-top: 200px;
+}
+
+.project-title {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.tag {
+    border: 1px solid grey;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.owner {
+    margin-bottom: 10px;
+}
+
+.votes {
+    margin-bottom: 20px;
+}
+
+.form-field {
+    margin-bottom: 20px;
+}
+
+.form-field label {
+    display: block;
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 20px;
+    border: none;
+    border-radius: 5px
+}
